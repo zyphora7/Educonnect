@@ -14,8 +14,11 @@ export default function StudentMaterials() {
           <div className="text-xs uppercase tracking-wider text-brand-600">{m.subject}</div>
           <h4 className="font-bold text-lg">{m.title}</h4>
           <p className="text-sm text-gray-700 mt-1">{m.description}</p>
-          <a href={m.link} target="_blank" rel="noreferrer"
+          <a   href={m.link?.startsWith("http")
+    ? m.link
+    : `http://localhost:8000${m.link}`} target="_blank" rel="noreferrer"
              className="btn-primary mt-3 inline-block">⬇️ Download / Open</a>
+             
           <div className="text-xs text-gray-500 mt-2">
             By {m.uploadedBy?.name || 'Teacher'} · {new Date(m.createdAt).toLocaleDateString()}
           </div>

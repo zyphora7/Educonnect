@@ -31,6 +31,8 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
+
+
 // Connect to MongoDB first, then start listening
 connectDB().then(() => {
   app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));

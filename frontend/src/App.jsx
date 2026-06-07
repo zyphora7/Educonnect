@@ -16,7 +16,7 @@ import StudentLayout from './pages/student/StudentLayout';
 import StudentDashboard from './pages/student/Dashboard';
 import StudentMaterials from './pages/student/Materials';
 import StudentProfile from './pages/student/Profile';
-
+import Chatbot from "./pages/student/Chatbot";
 export default function App() {
   return (
     <>
@@ -45,6 +45,7 @@ export default function App() {
             <Route index element={<StudentDashboard />} />
             <Route path="materials" element={<StudentMaterials />} />
             <Route path="profile" element={<StudentProfile />} />
+            <Route path="/student/chatbot" element={<Chatbot />} />
           </Route>
 
           <Route path="*" element={<div className="card">404 — Not Found</div>} />

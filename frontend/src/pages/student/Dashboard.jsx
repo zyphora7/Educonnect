@@ -16,6 +16,11 @@ export default function StudentDashboard() {
         <Link to="/student/profile" className="card hover:scale-[1.01] transition">
           👤 <span className="font-semibold">My Profile & Feedback</span>
         </Link>
+           <Link to="/student/chatbot" className="card hover:scale-[1.01] transition bg-blue-50">
+          💬 <span className="font-semibold">Mental Wellness Chatbot</span>
+          <p className="text-sm text-gray-600">Talk & get support anytime</p>
+        
+        </Link>
       </div>
     </div>
   );

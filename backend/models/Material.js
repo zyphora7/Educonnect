@@ -10,4 +10,6 @@ const materialSchema = new mongoose.Schema(
   },
   { timestamps: true } // createdAt acts as "date uploaded"
 );
+
 module.exports = mongoose.model('Material', materialSchema);
+
