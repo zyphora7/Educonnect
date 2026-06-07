@@ -7,3 +7,7 @@ dist
 .DS_Store
 backend/uploads/*
 !backend/uploads/.gitkeep
+chatbot-service/.venv/
+chatbot-service/chroma_db/
+chatbot-service/__pycache__/
+chatbot-service/.env
