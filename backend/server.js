@@ -6,6 +6,7 @@ const cors = require('cors');
 const connectDB = require('./config/db');
 const { errorHandler, notFound } = require('./middleware/errorMiddleware');
 
+
 const app = express();
 
 // --- Global middleware ---
@@ -24,7 +25,7 @@ app.get('/', (req, res) => res.json({ status: 'EduConnect API running 🚀' }));
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/students', require('./routes/studentRoutes'));
 app.use('/api/materials', require('./routes/materialRoutes'));
-
+app.use("/api/chat", require("./routes/chatRoutes"));
 // --- Error handlers (must be last) ---
 app.use(notFound);
 app.use(errorHandler);

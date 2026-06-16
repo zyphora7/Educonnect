@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from app import ask_llm, search_local,search_web
+from rag_services import ask_pdf_question
 
 app = FastAPI()
 
@@ -18,6 +19,9 @@ app.add_middleware(
 class ChatRequest(BaseModel):
     message: str
 
+class PDFChatRequest(BaseModel):
+    pdfUrl: str
+    question: str
 
 @app.post("/chat")
 def chat(req: ChatRequest):
@@ -38,3 +42,8 @@ def chat(req: ChatRequest):
     return {
         "response": answer
     }
+
+@app.post("/chat/pdf")
+def chat_pdf(data: PDFChatRequest):
+    answer = ask_pdf_question(data.pdfUrl, data.question)
+    return {"answer": answer}
