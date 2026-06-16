@@ -97,7 +97,7 @@ export default function Chatbot() {
       {isOpen && (
         <div
             className="
-            fixed bottom-20 right-6
+            bottom-20 right-6
             w-[min(850px,90vw)]
             h-[min(450px,80vh)]
             bg-white

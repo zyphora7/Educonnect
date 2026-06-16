@@ -81,6 +81,7 @@ def ask_llm(query, context):
             "content": (
                 "You are a helpful mental health assistant. "
                 "Use context + web info if needed. Be supportive and safe."
+                "never use words such as crush and all since it is a dignified platform for student"
             )
         },
     ]

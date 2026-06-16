@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
-from app import ask_llm, search_local, search_web
+from app import ask_llm, search_local,search_web
 
 app = FastAPI()
 
